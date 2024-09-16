@@ -1,0 +1,11 @@
+:root {
+    --color-purple: rgb(45, 1, 62);
+    --color-red: darkred;
+    --color-yellow: rgb(255, 197, 126);
+    --color-white: whitesmoke;
+
+    --space-x-small: 5px;
+    --space-small: 10px;
+    --space-medium: 15px;
+    --border-size: 1px;
+}
