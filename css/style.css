@@ -8,7 +8,7 @@
 
 body {
     font-family: "Raleway", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
 
     p, button {
         font-size: large;
@@ -69,6 +69,11 @@ main {
             padding: var(--space-small);
         }
 
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
         img {
             margin: var(--space-x-small);
             width: 300px;
@@ -76,7 +81,14 @@ main {
         }
 
         section {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-small);
             padding: var(--space-x-small) var(--space-small);
+
+            span {
+                font-weight: 700;
+            }
         }
     }
 }
@@ -94,5 +106,28 @@ footer {
 
     img {
         height: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        article {
+            width: 600px;
+
+            div {
+                flex-direction: row;
+
+                img {
+                    margin: 0;
+                    align-self: center;
+                }
+            }
+
+        }
     }
 }
