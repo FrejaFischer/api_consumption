@@ -6,7 +6,7 @@ const top_rated_btn = document.querySelector("#top_rated");
 const upcoming_btn = document.querySelector("#upcoming");
 const main = document.querySelector("main");
 
-// First load fetch Now Playing data
+// First load of site - fetch Now Playing data
 fetchData("now_playing");
 activeBtn(now_playing_btn);
 

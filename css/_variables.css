@@ -4,8 +4,18 @@
     --color-yellow: rgb(255, 197, 126);
     --color-white: whitesmoke;
 
-    --space-x-small: 5px;
-    --space-small: 10px;
-    --space-medium: 15px;
-    --border-size: 1px;
+    --space-x-small: 0.5em;
+    --space-small: 1em;
+    --space-medium: 1.5em;
+
+    --border-size: 0.1em;
+    
+    --footer-img-height:1em;
+    
+    --desk-article-max-width: 50em;
+    --desk-img-height: 20em;
+
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
 }
