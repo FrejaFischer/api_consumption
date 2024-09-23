@@ -4,6 +4,8 @@ const now_playing_btn = document.querySelector("#now_playing");
 const popular_btn = document.querySelector("#popular");
 const top_rated_btn = document.querySelector("#top_rated");
 const upcoming_btn = document.querySelector("#upcoming");
+
+const movies_container = document.createElement("div"); // container for having each movie in it, before appending to main after loop
 const main = document.querySelector("main");
 
 // First load of site - fetch Now Playing data
@@ -39,6 +41,7 @@ function fetchData(endpoint){
 
 function showData(response){
     main.innerHTML = ""; // empty main for existing content
+    movies_container.innerHTML = ""; // empty movies_container for content
     const movies = response.results; //movies is an object with several items. We need the array with all the movies
 
     movies.forEach(movie => {
@@ -58,15 +61,16 @@ function showData(response){
         <p>${movie.overview}</p>
         <p><span>Original Title: </span>${movie.original_title}</p>
         <p><span>Release Date: </span>${movie.release_date}</p>
-        `
+        `;
         
         const stylingDiv = document.createElement("div"); // this is used for styling
-        stylingDiv.append(movieImage, movieTextSection)
+        stylingDiv.append(movieImage, movieTextSection);
 
         movieArticle.append(movieHeader, stylingDiv);
-        main.appendChild(movieArticle);
+        movies_container.appendChild(movieArticle);
 
     });
+    main.appendChild(movies_container);
 };
 
 // function for adding the active styling to the current button
